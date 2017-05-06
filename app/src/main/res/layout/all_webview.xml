@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/webview_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/font_white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/webview_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/webview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_back"
+            android:layout_centerHorizontal="true"
+            android:maxWidth="200dp"
+            android:maxLines="1"
+            android:text="标题"
+            android:textColor="@color/font_block"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:layout_below="@+id/webview_top"
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+
+</RelativeLayout>

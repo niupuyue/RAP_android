@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fragment_home_top"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical">
+
+            <ImageView
+                android:id="@+id/home_saoyisao_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/linearLayout"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/saoyisao" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/location_left" />
+
+                <TextView
+                    android:id="@+id/home_top_position_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在定位"
+                    android:textColor="@color/font_white"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/location_right" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/home_message_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/activity_home_msg" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/home_search_ed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <net.example.paul.rapapp.widget.PullDownScrollView
+        android:id="@+id/home_refresh_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_home_top"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/fragment_home_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <net.example.paul.rapapp.widget.AutoBannerView
+                        android:id="@+id/autoBannerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:dotGravity="right"
+                        app:dotMargin="4dp"
+                        app:waitMilliSecond="2000" />
+
+                    <TextView
+                        android:id="@+id/bannerTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="#38000000"
+                        android:padding="4dp"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="@color/font_white">
+
+                    <GridView
+                        android:id="@+id/sort_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:numColumns="4"
+                        android:verticalSpacing="5dp"></GridView>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/home_bar_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/img_home_banner1" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/font_white">
+
+                    <net.example.paul.rapapp.widget.HorizontalListView
+                        android:id="@+id/home_horizontalListview_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></net.example.paul.rapapp.widget.HorizontalListView>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/home_bar_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/img_home_banner1" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/font_white">
+
+                    <net.example.paul.rapapp.widget.HorizontalListView
+                        android:id="@+id/home_horizontalListview_02"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></net.example.paul.rapapp.widget.HorizontalListView>
+
+                </LinearLayout>
+
+                <!--对症下药-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/font_white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/home_img_01"
+                        android:gravity="center"
+                        android:text="对症下药"
+                        android:textColor="@color/font_white"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_04" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_04" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--慢性病用药-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/font_white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/home_img_02"
+                        android:gravity="center"
+                        android:text="慢性病用药"
+                        android:textColor="@color/font_white"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_04" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_04" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--计生，器械-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/font_white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/home_img_03"
+                        android:gravity="center"
+                        android:text="计生丶器械"
+                        android:textColor="@color/font_white"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_04" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_04" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/product_05" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="就这么多了，返回顶部看看吧" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </net.example.paul.rapapp.widget.PullDownScrollView>
+
+</RelativeLayout>

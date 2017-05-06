@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_hot_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="高发疾病"
+        android:layout_margin="17dp"
+        android:background="@color/font_white"
+        android:textColor="@color/font_block"
+        android:textSize="13sp" />
+
+</LinearLayout>

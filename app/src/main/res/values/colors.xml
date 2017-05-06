@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主体颜色-->
+    <color name="colorPrimary">#00aa21</color>
+    <color name="colorPrimaryDark">#00aa21</color>
+    <color name="color_bg">#f5f5f5</color>
+    <!--白色字体-->
+    <color name="font_white">#ffffff</color>
+    <!--黑色字体-->
+    <color name="font_block">#000000</color>
+    <!--红色字体-->
+    <color name="font_red">#ff413c</color>
+    <!--浅黑色字体-->
+    <color name="font_light_black">#262535</color>
+    <!--浅黄色字体-->
+    <color name="font_light_yellow">#f4ea2a</color>
+</resources>

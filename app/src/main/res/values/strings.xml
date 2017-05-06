@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">放心大药房</string>
+
+    <!--欢迎引导页面-->
+    <string name="welcome_jump">跳过</string>
+
+    <!--主页面-->
+    <string name="main_home">首页</string>
+    <string name="main_medic">找药</string>
+    <string name="main_cart">购物车</string>
+    <string name="main_account">账号</string>
+</resources>
